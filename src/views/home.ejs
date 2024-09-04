@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+    <h1>This is <%= title %>.</h1>
+    <p>
+        <%= nombre %>
+    </p>
+
+    <!-- Ejecución de javascript -->
+    <%= new Date() %>
+
+    <!-- Bloques condicionales con EJS -->
+    <% if(isActive) { %>
+        <p>El sservidor está activo</p>
+    <% } else { %>
+        <p>El sservidor está inactivo</p>
+    <% } %>        
+
+    <!-- Iteraciones -->
+    <ul>
+        <% for (let i = 0; i < users.length; i++) { %>
+            <li><%= users[i].name %>, <%= users[i].age %> años</li>
+        <% } %>
+    </ul>
+
+    
+<%- include('partials/footer') %>
